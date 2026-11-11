@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>眼鏡フレームのフロント切削加工（セルロイド・アセテート）｜鯖江・有限会社ヤマミネ</title>
+<meta name="description" content="福井県鯖江市の有限会社ヤマミネ。セルロイド・アセテート眼鏡フレームのフロント部品（前枠）の切削加工を、支給図面・支給生地で1回1〜300個お受けします。標準料金・料金計算をページで公開。納期は約1か月、受け渡しは持ち込み・引き取りのみ。お問い合わせはメールで。">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "#org",
+   "name": "有限会社ヤマミネ",
+   "description": "眼鏡フレーム用フロント部品の切削加工",
+   "email": "yamamine@yamamine.ltd",
+   "areaServed": "福井県鯖江市",
+   "foundingDate": "1986",
+   "taxID": "9210002013532",
+   "identifier": {"@type": "PropertyValue", "propertyID": "法人番号", "value": "9210002013532"},
+   "employee": {"@type": "Person", "name": "加藤 悠", "jobTitle": "代表取締役"},
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "西番町11-61-2",
+    "addressLocality": "鯖江市",
+    "addressRegion": "福井県",
+    "addressCountry": "JP"
+   }
+  },
+  {
+   "@type": "Service",
+   "name": "眼鏡フレーム用フロント部品の切削加工",
+   "serviceType": "切削加工（受託）",
+   "provider": {
+    "@id": "#org"
+   },
+   "areaServed": "福井県鯖江市",
+   "description": "セルロイド・アセテート眼鏡フレームのフロント部品（前枠）を、支給図面と小断ち・R・山出し済みの支給生地に基づいて切削加工します。1回のご注文あたり1〜300個。受け渡しは持ち込み・引き取りのみ。",
+   "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "JPY",
+    "lowPrice": "50000",
+    "highPrice": "343000",
+    "description": "税抜。加工費＋CAMデータ作成費20,000円＋セッティング費20,000円（量産はCAMデータ作成費不要）。"
+   }
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: oklch(0.975 0.006 80);
+    --paper-2: oklch(0.955 0.008 80);
+    --white: oklch(0.995 0.003 80);
+    --ink: oklch(0.21 0.012 60);
+    --sub: oklch(0.47 0.012 60);
+    --mute: oklch(0.62 0.01 60);
+    --line: oklch(0.88 0.008 80);
+    --accent: oklch(0.47 0.095 55);
+    --accent-deep: oklch(0.36 0.07 50);
+    --accent-soft: oklch(0.93 0.03 70);
+    --dark: oklch(0.19 0.01 60);
+    --max: 1160px;
+    --serif: "Shippori Mincho B1", serif;
+    --sans: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  p{margin:0 0 1em;text-wrap:pretty}
+  h1,h2,h3{margin:0;font-weight:700;text-wrap:balance}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+  .mono{font-family:var(--mono)}
+  .num{font-family:var(--mono);font-feature-settings:"tnum"}
+
+  /* header */
+  header{position:sticky;top:0;z-index:20;background:color-mix(in oklch,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .hd{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:var(--serif);font-size:18px;letter-spacing:.08em;text-decoration:none}
+  .logo small{font-family:var(--sans);font-size:11px;color:var(--sub);letter-spacing:.1em;margin-right:8px}
+  nav{display:flex;gap:28px;font-size:14px}
+  nav a{text-decoration:none;color:var(--sub)}
+  nav a:hover{color:var(--ink)}
+  nav a.cta{color:var(--white);background:var(--ink);padding:7px 16px;border-radius:2px}
+
+  /* section base */
+  section{padding:112px 0}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .eyebrow::before{content:"";width:24px;height:1px;background:currentColor}
+  h2{font-family:var(--serif);font-size:38px;line-height:1.4;letter-spacing:.02em}
+  .lead{font-size:18px;color:var(--sub);max-width:640px;margin-top:20px}
+  .sec-head{margin-bottom:56px}
+
+  /* hero */
+  .hero{padding:72px 0 96px}
+  .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+  .hero h1{font-family:var(--serif);font-size:clamp(30px,3vw,40px);line-height:1.45;letter-spacing:.02em;word-break:keep-all}
+  .hero h1 .nb{white-space:nowrap}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero .lead{margin:28px 0 36px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;font-size:15px;text-decoration:none;border:1px solid var(--ink);border-radius:2px;font-weight:500;transition:.15s}
+  .btn.primary{background:var(--ink);color:var(--white)}
+  .btn.primary:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+  .btn.ghost:hover{background:var(--white)}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid var(--ink)}
+  .fact{padding:18px 16px 0 0}
+  .fact + .fact{padding-left:16px;border-left:1px solid var(--line)}
+  .fact .k{font-size:12px;color:var(--sub);letter-spacing:.06em}
+  .fact .v{font-family:var(--serif);font-size:26px;line-height:1.3;margin-top:6px}
+  .fact .v small{font-size:19px;font-family:var(--sans);margin-left:2px}
+  .hero-visual{position:relative}
+  .hero-visual .main{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+  .hero-visual .inset{position:absolute;left:-40px;bottom:-40px;width:46%;border:6px solid var(--paper);border-radius:2px;background:#000}
+  .hero-visual .cap{position:absolute;right:0;bottom:-32px;font-family:var(--mono);font-size:11px;color:var(--sub);letter-spacing:.08em}
+
+  /* scope */
+  .scope{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .process{display:grid;grid-template-columns:repeat(4,1fr);margin-top:8px}
+  .step{position:relative;padding:24px 18px 24px 0}
+  .step .no{font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.1em}
+  .step .t{font-size:17px;font-weight:700;margin-top:8px;line-height:1.5}
+  .step .d{font-size:13px;color:var(--sub);margin-top:6px;line-height:1.7}
+  .step .bar{height:6px;margin-bottom:18px;background:var(--line)}
+  .step.ours .bar{background:var(--accent)}
+  .step.ours .t{color:var(--accent-deep)}
+  .groups{display:grid;grid-template-columns:2fr 1fr 1fr;margin-bottom:4px;font-size:12px;letter-spacing:.06em}
+  .groups div{padding:6px 0;border-bottom:1px solid var(--ink);margin-right:18px;color:var(--sub)}
+  .groups .ours{color:var(--accent-deep);font-weight:700;border-color:var(--accent)}
+  .scope-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:1px solid var(--line)}
+  .scope-cols > div{padding:28px 28px 0 0}
+  .scope-cols > div + div{padding-left:28px;border-left:1px solid var(--line)}
+  .scope-cols h3{font-size:15px;letter-spacing:.06em;margin-bottom:12px}
+  .scope-cols p{font-size:15px;color:var(--sub)}
+
+  /* price */
+  .formula{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:32px 36px;background:var(--white);border:1px solid var(--line);margin-bottom:24px}
+  .formula .term{display:flex;flex-direction:column}
+  .formula .term .k{font-size:12px;color:var(--sub)}
+  .formula .term .v{font-family:var(--serif);font-size:24px}
+  .formula .op{font-family:var(--mono);font-size:22px;color:var(--mute)}
+  .formula .note{flex-basis:100%;font-size:13px;color:var(--sub);border-top:1px dashed var(--line);padding-top:14px;margin-top:6px}
+  table.price{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line);font-size:15px}
+  table.price th{font-weight:500;font-size:12px;letter-spacing:.04em;color:var(--sub);text-align:left;padding:14px 16px;white-space:nowrap;border-bottom:1px solid var(--ink);background:var(--paper-2)}
+  table.price td{padding:16px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.price tr:last-child td{border-bottom:none}
+  table.price td.r, table.price th.r{text-align:right}
+  table.price .q{font-family:var(--mono);font-size:16px;white-space:nowrap}
+  table.price .u{font-family:var(--mono);font-size:18px;font-weight:500}
+  table.price .tot{font-family:var(--mono);white-space:nowrap}
+  table.price .cap{display:inline-block;margin-top:4px;font-size:12px;color:var(--accent-deep);background:var(--accent-soft);padding:1px 8px;border-radius:2px;font-family:var(--sans)}
+  table.price .na{color:var(--mute);font-size:13px}
+  table.price tr.hl td{background:color-mix(in oklch,var(--accent-soft) 55%,var(--white))}
+  .tbl-note{font-size:13px;color:var(--sub);margin-top:16px;line-height:1.9}
+
+  .rule{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;margin:40px 0 0;padding:28px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+  .rule .tag{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--white);background:var(--accent);padding:4px 10px}
+  .rule h3{font-size:18px;margin-bottom:8px}
+  .rule p{color:var(--sub);font-size:15px;margin:0}
+
+  /* calculator */
+  .calc{margin-top:56px;background:var(--dark);color:var(--paper);display:grid;grid-template-columns:1fr 1.15fr}
+  .calc-in{padding:44px;border-right:1px solid oklch(0.3 0.01 60)}
+  .calc-out{padding:44px}
+  .calc h3{font-family:var(--serif);font-size:26px;margin-bottom:6px}
+  .calc .hint{font-size:13px;color:oklch(0.7 0.01 60);margin-bottom:32px}
+  .field{margin-bottom:28px}
+  .field label{display:block;font-size:12px;letter-spacing:.08em;color:oklch(0.72 0.01 60);margin-bottom:10px}
+  .qty{display:flex;align-items:stretch;border:1px solid oklch(0.4 0.01 60)}
+  .qty button{width:52px;background:transparent;border:0;color:var(--paper);font-size:22px;cursor:pointer}
+  .qty button:hover{background:oklch(0.26 0.01 60)}
+  .qty input{flex:1;min-width:0;background:transparent;border:0;border-left:1px solid oklch(0.4 0.01 60);border-right:1px solid oklch(0.4 0.01 60);color:var(--paper);font-family:var(--mono);font-size:32px;text-align:center;padding:10px 0;outline:none}
+  .qty input::-webkit-inner-spin-button{appearance:none}
+  input[type=range]{width:100%;margin-top:16px;accent-color:oklch(0.72 0.11 65)}
+  .range-lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:oklch(0.6 0.01 60)}
+  .seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid oklch(0.4 0.01 60)}
+  .seg button{background:transparent;border:0;color:oklch(0.75 0.01 60);padding:12px;font-family:var(--sans);font-size:14px;cursor:pointer}
+  .seg button + button{border-left:1px solid oklch(0.4 0.01 60)}
+  .seg button.on{background:var(--paper);color:var(--ink);font-weight:700}
+  .seg-note{font-size:12px;color:oklch(0.65 0.01 60);margin-top:10px;line-height:1.7}
+  .total-k{font-size:12px;letter-spacing:.08em;color:oklch(0.72 0.01 60)}
+  .total{font-family:var(--mono);font-size:56px;line-height:1.1;margin:8px 0 4px;letter-spacing:-.01em}
+  .total small{font-family:var(--sans);font-size:20px;margin-left:4px}
+  .per{font-size:13px;color:oklch(0.72 0.01 60)}
+  .breakdown{margin:24px 0 0;border-top:1px solid oklch(0.32 0.01 60)}
+  .breakdown div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid oklch(0.32 0.01 60);font-size:14px}
+  .breakdown div span:last-child{font-family:var(--mono)}
+  .breakdown .strike span:last-child{text-decoration:line-through;color:oklch(0.6 0.01 60)}
+  .msg{margin-top:20px;padding:14px 16px;font-size:14px;line-height:1.75;background:oklch(0.27 0.03 60);border-left:2px solid oklch(0.72 0.11 65)}
+  .msg:empty{display:none}
+  .chart{margin-top:24px}
+  .chart svg{width:100%;height:auto;display:block}
+  .chart-legend{display:flex;gap:18px;font-size:11px;color:oklch(0.65 0.01 60);margin-top:6px}
+  .chart-legend i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin-right:6px}
+
+
+  .price-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+  .tbl-k{font-size:13px;font-weight:700;letter-spacing:.06em;margin-bottom:12px}
+  .fee-notes{margin-top:20px;font-size:14px;color:var(--sub)}
+  .fee-notes p{margin:0 0 10px}
+  .fee-notes b{color:var(--ink)}
+  table.price.fees td{white-space:nowrap}
+  table.price.main{font-size:15px}
+  table.price.main th small{display:block;font-size:11px;letter-spacing:0;color:var(--mute);margin-top:3px;font-weight:400;white-space:normal}
+  table.price.main td{vertical-align:middle}
+  table.price.main .q{font-size:17px}
+  table.price .big{font-family:var(--mono);font-size:22px;font-weight:500}
+  table.price .pu{display:block;font-family:var(--mono);font-size:12px;color:var(--mute);margin-top:2px}
+  .sub-head{margin:56px 0 20px;padding-top:20px;border-top:1px solid var(--ink);font-size:15px;font-weight:700;letter-spacing:.08em}
+  .bd-k{font-size:12px;letter-spacing:.08em;color:oklch(0.72 0.01 60);margin-top:24px;display:flex;justify-content:space-between}
+  .bd-k span:last-child{font-family:var(--mono);color:var(--paper);font-size:14px}
+  .breakdown{margin:8px 0 0}
+  [data-show][hidden]{display:none}
+  @media (max-width:900px){.price-grid{grid-template-columns:1fr}}
+
+  /* timing */
+  .timing{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
+  .timing-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .timing-grid > div{padding:0 48px 0 0}
+  .timing-grid > div + div{padding:0 0 0 48px;border-left:1px solid var(--line)}
+  .timing .k{font-size:13px;color:var(--sub);letter-spacing:.06em}
+  .timing .v{font-family:var(--serif);font-size:44px;line-height:1.3;margin:10px 0 14px}
+  .timing .v small{font-size:32px;margin-left:2px}
+  .timing p{color:var(--sub);font-size:15px;margin:0}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+  .g{position:relative}
+  .g img{width:100%;height:100%;display:block}
+  .g figcaption{font-size:13px;color:var(--sub);margin-top:10px;display:flex;gap:10px}
+  .g figcaption .mono{color:var(--mute);font-size:11px;padding-top:2px}
+  figure{margin:0}
+  .gl{grid-column:span 6}.gl .frame{aspect-ratio:4/3}
+  .gs{grid-column:span 4}.gs .frame{aspect-ratio:4/3}
+  .gfit .frame{background:#fff}
+  .gfit .frame img{object-fit:cover}
+  .frame{background:var(--paper-2);overflow:hidden}
+  .frame img{object-fit:cover}
+
+  /* drawing */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .dl{margin-top:32px;border-top:1px solid var(--ink)}
+  .dl > div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .dl dt{font-weight:700;font-size:15px}
+  .dl dd{margin:0;font-size:15px;color:var(--sub)}
+  .draw-imgs{display:grid;grid-template-columns:1fr;gap:16px}
+  .draw-imgs .frame{aspect-ratio:16/10}
+  .cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 24px}
+  .case{display:flex;flex-direction:column}
+  .case .frame img{width:100%;height:100%;object-fit:cover}
+  .case .frame{aspect-ratio:4/3}
+  .case-no{font-size:11px;letter-spacing:.08em;color:var(--mute);margin-top:16px}
+  .case-t{font-size:17px;font-weight:700;margin:6px 0 12px;line-height:1.5}
+  .case-dl{margin:0;border-top:1px solid var(--ink)}
+  .case-dl > div{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .case-dl dt{font-weight:500}
+  .case-dl dd{margin:0;color:var(--sub)}
+  .case-d{font-size:14px;color:var(--sub);margin:12px 0 0;text-wrap:pretty}
+  .tbd{color:var(--mute) !important;font-weight:400}
+  @media (max-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}}
+  .case{min-width:0}
+
+  /* flow */
+  .flow{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .flow-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);counter-reset:f;row-gap:40px}
+  .flow-list li{counter-increment:f;padding:0 20px 0 0;position:relative}
+  .flow-list li::before{content:counter(f,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--accent);display:block;padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid var(--ink)}
+  .flow-list li b{display:block;font-size:16px;margin-bottom:6px}
+  .flow-list li span{font-size:13px;color:var(--sub);line-height:1.75;display:block}
+
+  /* outside */
+  .outside{display:grid;grid-template-columns:1fr 1.4fr;gap:72px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{font-size:14px;padding:6px 14px;border:1px solid var(--line);background:var(--white);border-radius:2px}
+  .chips-k{font-size:12px;color:var(--sub);letter-spacing:.06em;margin:28px 0 12px}
+  .chips-k:first-child{margin-top:0}
+  .caution{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+  .caution h3{font-size:16px;margin-bottom:10px}
+  .caution p{font-size:14px;color:var(--sub)}
+
+  /* contact */
+  .contact{background:var(--dark);color:var(--paper);padding:112px 0}
+  .contact .eyebrow{color:oklch(0.75 0.1 65)}
+  .contact h2{color:var(--paper)}
+  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:start}
+  .contact .lead{color:oklch(0.75 0.01 60)}
+  .mail{display:inline-block;font-family:var(--mono);font-size:30px;margin-top:32px;padding-bottom:6px;border-bottom:1px solid oklch(0.75 0.1 65);text-decoration:none;color:var(--paper)}
+  .mail:hover{color:oklch(0.8 0.1 65)}
+  .need{border-top:1px solid oklch(0.4 0.01 60)}
+  .need li{list-style:none;display:flex;gap:16px;padding:14px 0;border-bottom:1px solid oklch(0.32 0.01 60);font-size:15px}
+  .need li .mono{color:oklch(0.6 0.01 60);font-size:12px;padding-top:3px}
+  .need ul{margin:0;padding:0}
+  .need-k{font-size:12px;letter-spacing:.08em;color:oklch(0.7 0.01 60);margin-bottom:12px}
+  .contact .small{font-size:13px;color:oklch(0.62 0.01 60);margin-top:20px}
+
+  footer{padding:56px 0 64px;font-size:14px;color:var(--sub)}
+  .ft{display:grid;grid-template-columns:1fr;gap:40px;align-items:end}
+  .ft dl{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;margin:16px 0 0}
+  .ft dt{color:var(--mute)}
+  .ft dd{margin:0;color:var(--ink)}
+  .ft .name{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:.08em}
+  .ft .entrance{width:240px;aspect-ratio:4/3}
+
+  @media (max-width:900px){
+    .wrap{padding:0 20px}
+    nav a:not(.cta){display:none}
+    section{padding:80px 0}
+    .hero-grid,.two,.outside,.contact-grid,.calc,.timing-grid{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    h2{font-size:30px}
+    .hero-visual .inset{left:-8px;bottom:-24px}
+    .process{grid-template-columns:repeat(2,1fr)}
+    .groups{display:none}
+    .scope-cols{grid-template-columns:1fr}
+    .scope-cols > div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+    .calc-in{border-right:0;border-bottom:1px solid oklch(0.3 0.01 60)}
+    .calc-in,.calc-out{padding:28px}
+    .timing-grid > div + div{padding:32px 0 0;border-left:0;border-top:1px solid var(--line);margin-top:32px}
+    .gallery > *{grid-column:span 12 !important}
+    .hero h1 .nb{white-space:normal}
+    .flow-list{grid-template-columns:1fr 1fr}
+    table.price{font-size:13px}
+    table.price td,table.price th{padding:12px 10px}
+    .ft{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top"><small>鯖江</small>有限会社ヤマミネ</a>
+    <nav>
+      <a href="#scope">対応範囲</a>
+      <a href="#price">料金</a>
+      <a href="#works">加工の様子</a>
+      <a href="#cases">加工例</a>
+      <a href="#flow">ご依頼の流れ</a>
+      <a class="cta" href="#contact">メールで問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Front parts CNC machining</div>
+      <h1><span class="nb">セルロイド・アセテート</span><br><span class="nb">眼鏡フレーム用</span><br><em class="nb">フロント切削加工</em></h1>
+      <p class="lead">鯖江の眼鏡関連メーカー様向けに、支給図面とR付けした支給生地に基づく前枠の切削加工をお受けしています。1回のご注文あたり1個から300個まで。ご注文の確定と生地のお持ち込みから、約1か月でお渡しします。標準料金はすべてこのページに公開しています。</p>
+      <div class="btns">
+        <a class="btn primary" href="#calc">料金を計算する <span class="mono">→</span></a>
+        <a class="btn ghost" href="#scope">対応範囲を見る</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="k">受付数量（1回のご注文）</div><div class="v num">1–300<small>個</small></div></div>
+        <div class="fact"><div class="k">加工可否の回答</div><div class="v">2<small>営業日以内</small></div></div>
+        <div class="fact"><div class="k">納期の目安</div><div class="v">約1<small>か月</small></div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img class="main" src="assets/machining.jpg" alt="治具に固定したべっ甲柄の生地を、眼鏡フロントの形に切削している様子">
+      <img class="inset" src="assets/cam-data.jpg" alt="フロント部品の加工データ（CAM）">
+      <div class="cap">CAM DATA → MACHINING</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCOPE -->
+<section class="scope" id="scope" data-screen-label="02 対応範囲">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Scope</div>
+      <h2>当社が受け持つのは、<br>フロントの切削工程のみです</h2>
+      <p class="lead">小断ち・R・山出しまで済ませた生地をお預かりし、図面どおりに前枠を切削してお返しします。その後の工程はお客様側で行っていただきます。</p>
+    </div>
+
+    <div class="groups">
+      <div>お客様（生地の支給まで）</div>
+      <div class="ours">当社</div>
+      <div>お客様</div>
+    </div>
+    <div class="process">
+      <div class="step"><div class="bar"></div><div class="no">01</div><div class="t">生地の手配</div><div class="d">セルロイド／アセテート</div></div>
+      <div class="step"><div class="bar"></div><div class="no">02</div><div class="t">小断ち・R・山出し</div><div class="d">製品サイズに裁断し、R付け・山出し</div></div>
+      <div class="step ours"><div class="bar"></div><div class="no">03</div><div class="t">フロント切削</div><div class="d">支給図面に基づき切削</div></div>
+      <div class="step"><div class="bar"></div><div class="no">04</div><div class="t">磨き・組立 ほか</div><div class="d">丁番・テンプル・レンズ等</div></div>
+    </div>
+
+    <div class="scope-cols">
+      <div><h3>対象</h3><p>セルロイドフレーム・アセテートフレーム用のフロント部品（前枠）。</p></div>
+      <div><h3>支給いただくもの</h3><p>図面データと、小断ち・R・山出しが済んだ状態のアセテート生地、セルロイド生地。板材のままでの支給はお受けできません。</p></div>
+      <div><h3>お渡しする状態</h3><p>切削を終えたフロント部品。磨き・組立・金具取付は含みません。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price" data-screen-label="03 料金">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Price</div>
+      <h2>標準料金表</h2>
+      <p class="lead">ご注文数ごとの合計額です。合計は「加工費」「CAMデータ作成費」「セッティング費」からなり、内訳は表の下に記載しています。金額はすべて税抜です。</p>
+    </div>
+
+    <div class="tbl-k">ご注文数ごとの合計額（税抜）</div>
+    <table class="price main" id="priceTable">
+      <thead><tr><th>ご注文数</th><th class="r">一括生産・先発<small>加工費＋CAMデータ作成費＋セッティング費</small></th><th class="r">量産（リピート）<small>加工費＋セッティング費／50個以上</small></th></tr></thead>
+      <tbody>
+            <tr data-n="2"><td class="q">1〜2個</td><td class="r"><span class="big">50,000</span> 円</td><td class="r"><span class="na">—</span></td></tr>
+            <tr data-n="5"><td class="q">5個</td><td class="r"><span class="big">62,000</span> 円<span class="pu">1個あたり 約12,400円</span></td><td class="r"><span class="na">—</span></td></tr>
+            <tr data-n="10"><td class="q">10個</td><td class="r"><span class="big">82,000</span> 円<span class="pu">1個あたり 約8,200円</span></td><td class="r"><span class="na">—</span></td></tr>
+            <tr data-n="20"><td class="q">20個</td><td class="r"><span class="big">91,000</span> 円<span class="pu">1個あたり 約4,550円</span></td><td class="r"><span class="na">—</span></td></tr>
+            <tr data-n="30"><td class="q">30個</td><td class="r"><span class="big">100,000</span> 円<span class="pu">1個あたり 約3,333円</span></td><td class="r"><span class="na">—</span></td></tr>
+            <tr data-n="50"><td class="q">50個</td><td class="r"><span class="big">118,000</span> 円<span class="pu">1個あたり 約2,360円</span></td><td class="r"><span class="big">98,000</span> 円<span class="pu">1個あたり 約1,960円</span></td></tr>
+            <tr data-n="100"><td class="q">100個</td><td class="r"><span class="big">163,000</span> 円<span class="pu">1個あたり 約1,630円</span></td><td class="r"><span class="big">143,000</span> 円<span class="pu">1個あたり 約1,430円</span></td></tr>
+            <tr data-n="150"><td class="q">150個</td><td class="r"><span class="big">208,000</span> 円<span class="pu">1個あたり 約1,387円</span></td><td class="r"><span class="big">188,000</span> 円<span class="pu">1個あたり 約1,253円</span></td></tr>
+            <tr data-n="200"><td class="q">200個</td><td class="r"><span class="big">253,000</span> 円<span class="pu">1個あたり 約1,265円</span></td><td class="r"><span class="big">233,000</span> 円<span class="pu">1個あたり 約1,165円</span></td></tr>
+            <tr data-n="300"><td class="q">300個</td><td class="r"><span class="big">343,000</span> 円<span class="pu">1個あたり 約1,143円</span></td><td class="r"><span class="big">323,000</span> 円<span class="pu">1個あたり 約1,077円</span></td></tr>
+      </tbody>
+    </table>
+    <p class="tbl-note">
+      ※ 1個のご注文は、2個と同じ金額です。<br>
+      ※ 量産（リピート）は50個以上のご注文が対象です。49個以下の再注文は、一括生産の扱いになります。<br>
+      ※ 受付数量は、1回のご注文あたり1〜300個です。先発と量産は、それぞれ別のご注文として数えます。<br>
+      ※ 表にない個数の金額は、下の計算機能でご確認いただけます。
+    </p>
+
+    <div class="sub-head">内訳</div>
+    <div class="price-grid">
+      <div>
+        <div class="tbl-k">加工費（個数ごと）</div>
+        <table class="price" id="workTable">
+          <thead><tr><th>ご注文数</th><th class="r">単価</th><th class="r">加工費</th></tr></thead>
+          <tbody>
+            <tr data-n="2"><td class="q">1〜2個</td><td class="r"><span class="na">一式</span></td><td class="r"><span class="tot">10,000円</span></td></tr>
+            <tr data-n="5"><td class="q">5個</td><td class="r"><span class="u">4,400</span> 円</td><td class="r"><span class="tot">22,000円</span></td></tr>
+            <tr data-n="10"><td class="q">10個</td><td class="r"><span class="u">4,200</span> 円</td><td class="r"><span class="tot">42,000円</span></td></tr>
+            <tr data-n="20"><td class="q">20個</td><td class="r"><span class="u">2,550</span> 円</td><td class="r"><span class="tot">51,000円</span></td></tr>
+            <tr data-n="30"><td class="q">30個</td><td class="r"><span class="u">2,000</span> 円</td><td class="r"><span class="tot">60,000円</span></td></tr>
+            <tr data-n="50"><td class="q">50個</td><td class="r"><span class="u">1,560</span> 円</td><td class="r"><span class="tot">78,000円</span></td></tr>
+            <tr data-n="100"><td class="q">100個</td><td class="r"><span class="u">1,230</span> 円</td><td class="r"><span class="tot">123,000円</span></td></tr>
+            <tr data-n="150"><td class="q">150個</td><td class="r"><span class="u">1,120</span> 円</td><td class="r"><span class="tot">168,000円</span></td></tr>
+            <tr data-n="200"><td class="q">200個</td><td class="r"><span class="u">1,065</span> 円</td><td class="r"><span class="tot">213,000円</span></td></tr>
+            <tr data-n="300"><td class="q">300個</td><td class="r"><span class="u">1,010</span> 円</td><td class="r"><span class="tot">303,000円</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="tbl-k">ご注文ごとにかかる費用</div>
+        <table class="price fees">
+          <thead><tr><th></th><th class="r">CAMデータ作成費</th><th class="r">セッティング費</th></tr></thead>
+          <tbody>
+            <tr><td><b>一括生産</b></td><td class="r tot">20,000円</td><td class="r tot">20,000円</td></tr>
+            <tr><td><b>先発</b></td><td class="r tot">20,000円</td><td class="r tot">20,000円</td></tr>
+            <tr><td><b>量産（リピート）</b></td><td class="r"><span class="na">不要</span></td><td class="r tot">20,000円</td></tr>
+          </tbody>
+        </table>
+        <div class="fee-notes">
+          <p><b>合計＝加工費＋CAMデータ作成費＋セッティング費</b></p>
+          <p>一括生産は、先発・量産に分けず、1回のご注文でまとめて生産する形です。</p>
+          <p>量産（リピート）は、先発または前回の量産から1年以内・同一図面・同一加工内容のご注文が対象です。1年を過ぎた場合や、図面・形状・加工内容に変更がある場合は、量産の扱いにならず、CAMデータ作成費がかかります。</p>
+          <p>量産（リピート）は50個以上のご注文が対象です。49個以下の場合は、同じ図面の再注文でも一括生産の扱いになり、CAMデータ作成費がかかります。</p>
+          <p>量産の加工費は、量産の個数で計算します。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALCULATOR -->
+    <div class="calc" id="calc" data-screen-label="04 料金計算">
+      <div class="calc-in">
+        <h3>料金を計算する</h3>
+        <p class="hint">ご注文の形を選び、個数を入れてください。</p>
+        <div class="field">
+          <label>ご注文の形</label>
+          <div class="seg">
+            <button type="button" data-mode="bulk" class="on">一括生産</button>
+            <button type="button" data-mode="split">先発＋量産</button>
+          </div>
+        </div>
+        <div class="field" data-show="bulk">
+          <label for="qBulk">ご注文数</label>
+          <div class="qty">
+            <button type="button" data-step="-1" data-for="qBulk" aria-label="1個減らす">−</button>
+            <input id="qBulk" type="number" min="1" max="300" value="100" inputmode="numeric">
+            <button type="button" data-step="1" data-for="qBulk" aria-label="1個増やす">+</button>
+          </div>
+        </div>
+        <div class="field" data-show="split">
+          <label for="qPre">先発の個数</label>
+          <div class="qty">
+            <button type="button" data-step="-1" data-for="qPre" aria-label="1個減らす">−</button>
+            <input id="qPre" type="number" min="1" max="300" value="20" inputmode="numeric">
+            <button type="button" data-step="1" data-for="qPre" aria-label="1個増やす">+</button>
+          </div>
+        </div>
+        <div class="field" data-show="split">
+          <label for="qMass">量産（リピート）の個数</label>
+          <div class="qty">
+            <button type="button" data-step="-1" data-for="qMass" aria-label="1個減らす">−</button>
+            <input id="qMass" type="number" min="50" max="300" value="200" inputmode="numeric">
+            <button type="button" data-step="1" data-for="qMass" aria-label="1個増やす">+</button>
+          </div>
+          <div class="seg-note">量産は50〜300個、先発は1〜300個です（1回のご注文あたり）。量産を複数回に分ける場合は、1回ずつ計算してください。</div>
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="total-k">合計額（税抜）</div>
+        <div class="total"><span id="tot">0</span><small>円</small></div>
+        <div class="per" id="per"></div>
+        <div id="bd"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMING -->
+<section class="timing" data-screen-label="05 回答と納期">
+  <div class="wrap timing-grid">
+    <div>
+      <div class="k">加工可否の回答</div>
+      <div class="v">2<small>営業日以内</small></div>
+      <p>図面・生地の情報・数量・希望納期を受け取ってから、加工できるかどうかと金額・納期をメールで回答します。</p>
+    </div>
+    <div>
+      <div class="k">納期の目安</div>
+      <div class="v">約1<small>か月</small></div>
+      <p>ご注文の確定（図面・数量・金額）と生地のお持ち込みから、約1か月が目安です。数量や加工内容によって前後します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works" data-screen-label="06 加工の様子">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Machining</div>
+      <h2>加工の様子と、お渡しする状態</h2>
+    </div>
+    <div class="gallery">
+      <figure class="g gl">
+        <div class="frame"><img src="assets/finished.jpg" alt="切削後・磨き前の眼鏡フロント（べっ甲柄・正面）" loading="lazy"></div>
+        <figcaption><span class="mono">01</span>お渡しする状態（切削後・磨き前）</figcaption>
+      </figure>
+      <figure class="g gl">
+        <div class="frame"><img src="assets/closeup.jpg" alt="眼鏡フロントの切削面のアップ（黒）" loading="lazy"></div>
+        <figcaption><span class="mono">02</span>切削面</figcaption>
+      </figure>
+      <figure class="g gs">
+        <div class="frame"><img src="assets/machining.jpg" alt="治具に固定した生地を眼鏡フロントの形に切削している様子" loading="lazy"></div>
+        <figcaption><span class="mono">03</span>治具に生地を固定し、加工データに基づいて切削します。</figcaption>
+      </figure>
+      <figure class="g gs gfit">
+        <div class="frame"><img src="assets/blank.jpg" alt="小断ち・R・山出し済みの支給生地（べっ甲柄）" loading="lazy"></div>
+        <figcaption><span class="mono">04</span>支給いただく生地の状態</figcaption>
+      </figure>
+      <figure class="g gs">
+        <div class="frame"><img src="assets/machine.jpg" alt="マザック VTC-430A 立形マシニングセンタ" loading="lazy" style="object-position:50% 30%"></div>
+        <figcaption><span class="mono">05</span>加工機</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases" style="padding-top:0" data-screen-label="07 加工例">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Cases</div>
+      <h2>加工例</h2>
+    </div>
+    <div class="cases">
+      <article class="case">
+        <div class="frame"><img src="assets/case-mencut.jpg" alt="面カット加工を施した眼鏡フロント（べっ甲柄・智側）" loading="lazy"></div>
+        <div class="case-no mono">CASE 01</div>
+        <h3 class="case-t">面カット</h3>
+      </article>
+      <article class="case">
+        <div class="frame"><img src="assets/closeup.jpg" alt="面カット加工を施した眼鏡フロントの切削面（黒）" loading="lazy"></div>
+        <div class="case-no mono">CASE 02</div>
+        <h3 class="case-t">面カット</h3>
+      </article>
+      <article class="case">
+        <div class="frame"><img src="assets/case-tv.jpg" alt="テレビカット加工を施した眼鏡フロント（こげ茶べっ甲）" loading="lazy"></div>
+        <div class="case-no mono">CASE 03</div>
+        <h3 class="case-t">テレビカット</h3>
+      </article>
+      <article class="case">
+        <div class="frame"><img src="assets/case-asym.jpg" alt="左右で形の異なるアシンメトリー加工の眼鏡フロント" loading="lazy"></div>
+        <div class="case-no mono">CASE 04</div>
+        <h3 class="case-t">アシンメトリー加工</h3>
+      </article>
+      <article class="case">
+        <div class="frame"><img src="assets/case-hole.jpg" alt="穴あけ加工を施したクリア生地の眼鏡フロント" loading="lazy"></div>
+        <div class="case-no mono">CASE 05</div>
+        <h3 class="case-t">穴あけ加工</h3>
+      </article>
+      <article class="case">
+        <div class="frame"><img src="assets/case-back.jpg" alt="裏カット加工を施した眼鏡フロント（べっ甲柄・横から）" loading="lazy"></div>
+        <div class="case-no mono">CASE 06</div>
+        <h3 class="case-t">裏加工</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DRAWING -->
+<section style="padding-top:0" data-screen-label="08 図面と生地">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow">Drawing / Material</div>
+      <h2>図面と生地について</h2>
+      <dl class="dl">
+        <div><dt>図面</dt><dd>DXFなどの図面データをお送りください。図面の不備や寸法の不足がある場合は、お受けできないことがあります。図面の修正・設計の補助は行っていません。</dd></div>
+        <div><dt>生地</dt><dd>小断ち・R・山出しが済んだ状態でご支給ください。状態・サイズ・厚み・切削の余白を確認してから、加工できるかを判断します。</dd></div>
+        <div><dt>予備生地</dt><dd>予備生地を付けるかどうかは、お客様のご判断にお任せしています。加工中の不良などで生地が不足した場合でも、当社では生地の補償はいたしません。</dd></div>
+        <div><dt>不良時</dt><dd>加工不良・生地不良が見つかった場合は、その都度ご相談のうえ対応します。</dd></div>
+        <div><dt>確認</dt><dd>加工できるかどうかは、すべてメールで確認します。</dd></div>
+      </dl>
+    </div>
+    <div class="draw-imgs">
+      <div class="frame" style="background:#fff"><img src="assets/drawing-dxf.jpg" alt="眼鏡フロントのDXF図面（オリジナルサンプル）" loading="lazy" style="width:100%;height:100%;object-fit:contain"></div>
+      <div class="frame" style="background:#000"><img src="assets/cam-data.jpg" alt="眼鏡フロントのCAM加工データ（工具経路）" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow" id="flow" data-screen-label="09 ご依頼の流れ">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Flow</div>
+      <h2>ご依頼の流れ</h2>
+    </div>
+    <ol class="flow-list">
+      <li><b>メールで問い合わせ</b><span>図面、生地の情報、数量、希望納期を添えてお送りください。</span></li>
+      <li><b>加工可否の確認</b><span>2営業日以内に、加工できるかどうかを回答します。</span></li>
+      <li><b>ご注文の確定</b><span>加工内容・金額・納期をメールで確認します。</span></li>
+      <li><b>生地のお持ち込み</b><span>事前に日時を決めて、当社までお持ち込みください。</span></li>
+      <li><b>切削加工</b><span>生地を確認してから加工を始めます。</span></li>
+      <li><b>お引き渡し</b><span>事前に日時を決めて、当社でお引き取りください。</span></li>
+      <li><b>ご請求</b><span>請求書をメールで発行します。</span></li>
+      <li><b>お支払い</b><span>月末締め・翌月末払い。</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- OUTSIDE -->
+<section data-screen-label="10 対象外">
+  <div class="wrap outside">
+    <div>
+      <div class="eyebrow">Not included</div>
+      <h2>お受けしていない内容</h2>
+      <p class="lead">少人数で切削に専念しているため、以下はお受けしていません。あらかじめご了承ください。</p>
+    </div>
+    <div>
+      <div class="chips-k">工程</div>
+      <div class="chips">
+        <span>完成品の眼鏡・サングラス製作</span><span>テンプル製作</span><span>丁番・金具の取付</span><span>レンズ加工・鼻パッド取付</span><span>磨き・組立・調整</span><span>板材からの小断ち・R・山出し</span>
+      </div>
+      <div class="chips-k">設計・販売</div>
+      <div class="chips">
+        <span>図面修正・設計補助</span><span>材料選定の代行・技術指導</span><span>部品・サンプル品の販売</span>
+      </div>
+      <div class="chips-k">数量・連絡・受け渡し</div>
+      <div class="chips">
+        <span>1回のご注文で301個以上</span><span>量産を前提とした値下げのご相談</span><span>電話・DMでのご相談</span><span>事前連絡のないご来社</span><span>生地・製品の発送</span>
+      </div>
+      <div class="caution">
+        <h3>想定を超える加工内容について</h3>
+        <p>受付数量の範囲内でも、加工時間が大きく増える形状、工程の多い加工、高い精度が必要な加工、生地の状態に不安がある場合、切削の余白が少ない場合などは、お断りするか、標準料金とは異なる単価になることがあります。その場合は、見積もり期限を記載した見積書をメールでお送りします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" data-screen-label="11 お問い合わせ">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>お問い合わせはメールで</h2>
+      <p class="lead">お問い合わせ・仕様の確認はメールでのみお受けしています。2営業日以内に回答します。</p>
+      <a class="mail" href="mailto:yamamine@yamamine.ltd">yamamine@yamamine.ltd</a>
+    </div>
+    <div class="need">
+      <div class="need-k">メールに記載・添付いただくもの</div>
+      <ul>
+        <li><span class="mono">01</span>会社名・ご担当者名</li>
+        <li><span class="mono">02</span>図面データ（DXFなど）</li>
+        <li><span class="mono">03</span>生地の情報（材質・サイズ・厚み）</li>
+        <li><span class="mono">04</span>希望数量（1回のご注文あたり1〜300個）</li>
+        <li><span class="mono">05</span>希望納期</li>
+        <li><span class="mono">06</span>一括生産／先発／量産の別</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <div>
+      <div class="name">有限会社ヤマミネ</div>
+      <dl>
+        <dt>所在地</dt><dd>福井県鯖江市西番町11-61-2</dd>
+        <dt>代表者</dt><dd>代表取締役 加藤 悠</dd>
+        <dt>設立</dt><dd>昭和61年</dd>
+        <dt>事業内容</dt><dd>眼鏡フレーム用フロント部品の切削加工</dd>
+        <dt>主要設備</dt><dd>マザック VTC-430A</dd>
+        <dt>法人番号</dt><dd class="num">9210002013532</dd>
+        <dt>インボイス登録番号</dt><dd class="num">T9210002013532</dd>
+        <dt>お問い合わせ</dt><dd><a href="mailto:yamamine@yamamine.ltd">yamamine@yamamine.ltd</a></dd>
+      </dl>
+      <p style="margin-top:24px;font-size:12px;color:var(--mute)">© 2026 有限会社ヤマミネ</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ===== 料金計算式（税抜） =====
+     加工費 W(n)：n≦2 → 10,000 ／ n≦10 → 10,000+4,000×(n−2) ／ n≧11 → 42,000+900×(n−10)
+     一括生産・先発 = W(n) + CAM 20,000 + セッティング 20,000
+     量産       = W(n) + セッティング 20,000 */
+  const CAM=20000, SETUP=20000;
+  const STEPS=[2,5,10,20,30,50,100,150,200,300];
+  const yen=n=>n.toLocaleString('ja-JP');
+  const work=n=> n<=2 ? 10000 : n<=10 ? 10000+4000*(n-2) : 42000+900*(n-10);
+
+  /* 料金表（合計・内訳）はHTMLに直接記載（検索・AIが読めるように）。単価を変える場合は表と上の式の両方を更新してください。 */
+
+  const ids=['qBulk','qPre','qMass'];
+  const el=Object.fromEntries(ids.map(i=>[i,document.getElementById(i)]));
+  let st=Object.assign({mode:'bulk',qBulk:100,qPre:20,qMass:200}, JSON.parse(localStorage.getItem('ym_calc3')||'{}'));
+  st.qMass=Math.max(50,st.qMass);
+  const MIN={qBulk:1,qPre:1,qMass:50};
+  const clamp=(v,i)=>{v=parseInt(v);const lo=MIN[i]||1;if(isNaN(v))v=lo;return Math.min(300,Math.max(lo,v));};
+
+  function block(title,n,cam){
+    const w=work(n), sub=w+(cam?CAM:0)+SETUP;
+    return {sub, html:'<div class="bd-k"><span>'+title+'（'+n+'個）</span><span>'+yen(sub)+'円</span></div><div class="breakdown">'+
+      [['加工費',yen(w)+'円'],['CAMデータ作成費',cam?yen(CAM)+'円':'不要'],['セッティング費',yen(SETUP)+'円']]
+      .map(r=>'<div><span>'+r[0]+'</span><span>'+r[1]+'</span></div>').join('')+'</div>'};
+  }
+  function render(){
+    ids.forEach(i=>el[i].value=st[i]);
+    document.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.mode===st.mode));
+    document.querySelectorAll('[data-show]').forEach(f=>f.hidden=f.dataset.show!==st.mode);
+    let total, count, html;
+    if(st.mode==='bulk'){
+      const b=block('一括生産',st.qBulk,true); total=b.sub; count=st.qBulk; html=b.html;
+    }else{
+      const a=block('先発',st.qPre,true), m=block('量産（リピート）',st.qMass,false);
+      total=a.sub+m.sub; count=st.qPre+st.qMass; html=a.html+m.html;
+    }
+    document.getElementById('tot').textContent=yen(total);
+    document.getElementById('per').textContent='合計 '+count+'個 ／ 1個あたり 約 '+yen(Math.round(total/count))+'円（諸費用込み）';
+    document.getElementById('bd').innerHTML=html;
+    const hl = st.mode==='bulk'?[st.qBulk]:[st.qPre,st.qMass];
+    document.querySelectorAll('#priceTable tbody tr, #workTable tbody tr').forEach(tr=>{
+      const n=+tr.dataset.n; tr.classList.toggle('hl', hl.some(q=>q===n||(n===2&&q<=2)));
+    });
+    localStorage.setItem('ym_calc3',JSON.stringify(st));
+  }
+  ids.forEach(i=>{
+    el[i].addEventListener('change',e=>{st[i]=clamp(e.target.value,i);render();});
+    el[i].addEventListener('input',e=>{const v=parseInt(e.target.value);if(v>=MIN[i]&&v<=300){st[i]=v;render();}});
+  });
+  document.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>{const i=b.dataset.for;st[i]=clamp(st[i]+ +b.dataset.step,i);render();});
+  document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{st.mode=b.dataset.mode;render();});
+  render();
+})();
+</script>
+</body>
+</html>
